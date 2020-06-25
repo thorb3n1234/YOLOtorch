@@ -205,6 +205,6 @@ def create_modules(blocks):
 model = Darknet("cfg/yolov3.cfg")
 inp = get_test_input()
 pred = forward(model, inp, torch.cuda.is_available())
-
+print(pred.shape)
 print(pred)
 

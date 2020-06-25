@@ -8,8 +8,8 @@ import numpy as np
 import cv2
 
 
-def predict_transform(prediction, inp_dim, anchors, num_classes, CUDA=True):
-    prediction = prediction.to(torch.device("cuda"))
+def predict_transform(prediction, inp_dim, anchors, num_classes, CUDA):
+    # prediction = prediction.to(torch.device("cuda"))
     batch_size = prediction.size(0)
     stride = inp_dim // prediction.size(2)
     grid_size = inp_dim // stride
